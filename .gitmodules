@@ -1,0 +1,6 @@
+[submodule "external/catch-tests"]
+	path = external/catch-tests
+	url = git@github.com:philsquared/Catch.git
+[submodule "external/catch"]
+	path = external/catch
+	url = https://github.com/philsquared/Catch.git
