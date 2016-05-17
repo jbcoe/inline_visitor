@@ -1,7 +1,7 @@
 // FIXME: Add header info
 
-#ifndef // INLINE_VISITOR_INLINE_VISITOR_H
-#define // INLINE_VISITOR_INLINE_VISITOR_H
+#ifndef INLINE_VISITOR_INLINE_VISITOR_H
+#define INLINE_VISITOR_INLINE_VISITOR_H
 
 template <typename T, typename F, typename BaseInnerVisitor, typename ArgsT>
 class ComposeVisitor

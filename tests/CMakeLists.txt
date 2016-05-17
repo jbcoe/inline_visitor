@@ -1,0 +1,2 @@
+add_executable(test_inline_visitor test_inline_visitor.cpp)
+
