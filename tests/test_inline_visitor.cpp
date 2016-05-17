@@ -1,9 +1,12 @@
-#define CATCH_CONFIG_MAIN // This tells Catch to provide a main() - only do this
+#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do
+                           // this
 #include <catch.hpp>
-#include "inline_visitor/inline_visitor.h"
 #include <string>
+#include "inline_visitor/inline_visitor.h"
 
 using namespace std::string_literals;
+
+namespace {
 
 struct ShapeVisitor;
 struct Shape {
@@ -17,9 +20,9 @@ struct Square;
 
 struct ShapeVisitor {
   virtual ~ShapeVisitor() = default;
-  virtual void Visit(const Circle&) = 0;
-  virtual void Visit(const Triangle&) = 0;
-  virtual void Visit(const Square&) = 0;
+  virtual void Visit(const Circle &) = 0;
+  virtual void Visit(const Triangle &) = 0;
+  virtual void Visit(const Square &) = 0;
 };
 
 struct Square : Shape {
@@ -32,8 +35,9 @@ struct Triangle : Shape {
   void Accept(ShapeVisitor &v) const final { v.Visit(*this); }
 };
 
-TEST_CASE("Inline visitor can identify all types", "[inline_visitor]") 
-{
+}  // end namespace
+
+TEST_CASE("Inline visitor can identify all types", "[inline_visitor]") {
   int sides = 1;
 
   auto v = begin_visitor<ShapeVisitor>()
@@ -44,10 +48,10 @@ TEST_CASE("Inline visitor can identify all types", "[inline_visitor]")
 
   Circle().Accept(v);
   REQUIRE(sides == 1);
-  
+
   Square().Accept(v);
   REQUIRE(sides == 4);
-  
+
   Triangle().Accept(v);
   REQUIRE(sides == 3);
 }
