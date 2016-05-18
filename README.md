@@ -20,7 +20,7 @@ CMake, Python 2.7 and a C++14 compiler are required.
 Catch is included as an external library using git submodules.
 
 #Continuous integration
-CI is provided by Travis CI. 
+**Build status (on Travis-CI):** [![Build Status](https://travis-ci.org/jbcoe/inline_visitor.svg?branch=master)](https://travis-ci.org/jbcoe/inline_visitor)
 
 # Feedback
 We welcome feedback concerning the use of this library.
