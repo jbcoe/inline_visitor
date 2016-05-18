@@ -1,4 +1,6 @@
-// FIXME: Add header info
+// inline_visitor.h
+// Classes and functions to implement the inline visitor from
+// http://accu.org/index.php/articles/2021
 
 #ifndef INLINE_VISITOR_INLINE_VISITOR_H
 #define INLINE_VISITOR_INLINE_VISITOR_H
