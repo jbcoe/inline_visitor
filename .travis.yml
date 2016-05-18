@@ -65,7 +65,6 @@ install:
     fi
   - cd ${TRAVIS_BUILD_DIR}
 
-before_script:
-  - export CXX=${COMPILER}
+before_script: export CXX=${COMPILER}
 
 script: ${TRAVIS_BUILD_DIR}/scripts/build.py -t
