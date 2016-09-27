@@ -1,3 +1,5 @@
+# Based on .travis.yml from https://github.com/philsquared/Catch
+
 language: cpp
 sudo: false
 
